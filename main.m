@@ -37,6 +37,7 @@ int main(int argc, char **argv) {
     usleep(SECOND * interval);
   }
 
+  CGImageDestinationSetProperties(destination, (CFDictionaryRef)gifProperties);
   CGImageDestinationFinalize(destination);
   free(displays);
   CFRelease(destination);
